@@ -12,7 +12,10 @@ Here is a list of my primary skills:
 * Drawing skills
 * Problem solving skills
 
-
+#### Contacts & Social Media
+* [Instagram](https://www.instagram.com/marrriia.s/)
+* [Facebook](https://www.facebook.com/people/Maria-Shpuntova/100010805882816)
+* [VK](https://vk.com/masha211999)
 
 ### Javier Buelvas
 
