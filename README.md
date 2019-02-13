@@ -24,3 +24,5 @@ He is now an Interaction Design & Development student at George Brown College.
   * Beer
   * Information Design
   * More Beer
+
+[Check out his GitHub](https://github.com/javier-buelvas)
