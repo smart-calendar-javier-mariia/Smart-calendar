@@ -46,6 +46,29 @@ let event2 = {
   },
   createdBy: `Javier`
 }
+let event4 = {
+  date:{
+    year: 2019,
+    month: 02,
+    day: 20
+  },
+  title: `In class lab`,
+  class: `INTR2012 INTERFACE DEVELOPMENT II`,
+  startTime: `13:00`,
+  endTime: `14:00`,
+  repeats: true,
+  howOften: `Every Wednesday`,
+  reminder: `1 hour`,
+  completed: true,
+  eventCategory: `School`,
+  eventNotes: `Work on in class lab`,
+  eventCreated: {
+    year: 2019,
+    month: 02,
+    day: 20
+  },
+  createdBy: `Mariia`
+}
 
 let event5 = {
   date:{
@@ -69,28 +92,4 @@ let event5 = {
     day: 20
   },
   createdBy: `Javier`
-}
-
-let event4 = {
-  date:{
-    year: 2019,
-    month: 02,
-    day: 20
-  },
-  title: `In class lab`,
-  class: `INTR2012 INTERFACE DEVELOPMENT II`,
-  startTime: `13:00`,
-  endTime: `14:00`,
-  repeats: true,
-  howOften: `Every Wednesday`,
-  reminder: `1 hour`,
-  completed: true,
-  eventCategory: `School`,
-  eventNotes: `Work on in class lab`,
-  eventCreated: {
-    year: 2019,
-    month: 02,
-    day: 20
-  },
-  createdBy: `Mariia`
 }
