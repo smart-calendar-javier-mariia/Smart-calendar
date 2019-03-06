@@ -81,3 +81,9 @@ body {font-family: Verdana, sans-serif;}
   background: #FFB6C1;
   color: white;
 }
+
+/* IN-CLASS WORK MARCH 6 2019 */
+.taskCompleted {
+  text-decoration: line-through;
+  color: grey;
+}
