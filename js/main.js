@@ -69,6 +69,8 @@ let event3 = {
     day: 09
   },
   createdBy: `Mariia`
+}
+
 let event4 = {
   date:{
     year: 2019,
@@ -115,4 +117,68 @@ let event5 = {
     day: 20
   },
   createdBy: `Javier`
+}
+
+
+// WORKING WITH DATES - Javier
+
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+]
+
+
+let focusDate = new Date();
+
+drawMonthView();
+
+document.getElementById("prevMonth").addEventListener("click", function(){
+   focusDate = new Date(focusDate.getFullYear(), focusDate.getMonth() -1, 1);
+   drawMonthView();
+ });
+
+ document.getElementById("nextMonth").addEventListener("click", function(){
+    focusDate = new Date(focusDate.getFullYear(), focusDate.getMonth() +1, 1);
+    drawMonthView();
+  });
+
+function drawMonthView() {
+
+    let dayOneOffset = new Date(focusDate.getFullYear(), focusDate.getMonth(), 0);
+
+    let daysInMonth = new Date(focusDate.getFullYear(), focusDate.getMonth() + 1, 0).getDate();
+
+    console.log(focusDate);
+    console.log(dayOneOffset);
+    console.log(dayOneOffset.getDay());
+    console.log(daysInMonth);
+
+    let skipLeadingDays = dayOneOffset.getDay();
+
+    let monthView = [];
+
+    for (var i = 0; i < skipLeadingDays; i++) {
+      monthView.push(" ");
+    }
+
+    console.log(monthView);
+
+    for (var i = 0; i < daysInMonth; i++) {
+      monthView.push(i+1);
+    }
+
+    console.log(monthView);
+
+    let monthViewOutput = monthView.map(currentDay => `<li>${currentDay}</li>`).join(" ");
+
+    console.log(monthViewOutput);
+
+    document.getElementById('monthViewDays').innerHTML = monthViewOutput;
+
+    let focusMonthName = monthNames[focusDate.getMonth()];
+    let focusYear = focusDate.getFullYear();
+
+    console.log(focusMonthName);
+    // document.getElementById('focusMonthLabel').innerHTML = focusMonthName;
+
+    document.getElementById('focusMonthLabel').innerHTML = `${focusMonthName}<br><span style="font-size:18px">${focusYear}</span>`
 }
