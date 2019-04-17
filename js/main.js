@@ -166,13 +166,68 @@ function drawMonthView() {
       monthView.push(i+1);
     }
 
-    console.log(monthView);
+    let todayCheck = new Date();
+
+
+    // display current day
+
+    if (focusDate.getFullYear() == todayCheck.getFullYear() && focusDate.getMonth() == todayCheck.getMonth() ) {
+
+      let todayActive = skipLeadingDays + (new Date()).getDate() -1;
+
+      console.log(todayActive);
+
+      monthView[todayActive] = `<span class="active">${monthView[todayActive]}</span>`;
+
+      console.log(monthView);
+
+    }
+
+    // display data
+
+    if (focusDate.getFullYear() == event1.date.year && focusDate.getMonth() == event1.date.month - 1){
+      let eventDay  = skipLeadingDays + event1.date.day - 1;
+      monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
+
+    }
+
+    if (focusDate.getFullYear() == event2.date.year && focusDate.getMonth() == event2.date.month - 1){
+      let eventDay  = skipLeadingDays + event2.date.day - 1;
+      monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
+    }
+
+    if (focusDate.getFullYear() == event3.date.year && focusDate.getMonth() == event3.date.month - 1){
+      let eventDay  = skipLeadingDays + event3.date.day - 1;
+      monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
+    }
+
+    if (focusDate.getFullYear() == event4.date.year && focusDate.getMonth() == event4.date.month - 1){
+      let eventDay  = skipLeadingDays + event4.date.day - 1;
+      monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
+    }
+
+    if (focusDate.getFullYear() == event5.date.year && focusDate.getMonth() == event5.date.month - 1){
+      let eventDay  = skipLeadingDays + event5.date.day - 1;
+      monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
+    }
+
+
+
+
 
     let monthViewOutput = monthView.map(currentDay => `<li>${currentDay}</li>`).join(" ");
 
     console.log(monthViewOutput);
 
     document.getElementById('monthViewDays').innerHTML = monthViewOutput;
+
+    console.log(document.getElementsByClassName("event"));
+
+    for (var i = 0; i < document.getElementsByClassName("event").length; i++) {
+      document.getElementsByClassName("event")[i].addEventListener("click", function(){
+         document.getElementById("eventViewer").classList.toggle("hidden");
+       })
+    }
 
     let focusMonthName = monthNames[focusDate.getMonth()];
     let focusYear = focusDate.getFullYear();

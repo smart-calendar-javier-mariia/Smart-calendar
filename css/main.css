@@ -81,3 +81,13 @@ body {font-family: Verdana, sans-serif;}
   background: #FFB6C1;
   color: white;
 }
+
+.days li .event {
+  padding: 5px;
+  background: #52B2F4;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
