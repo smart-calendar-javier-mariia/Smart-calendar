@@ -206,10 +206,7 @@ function drawMonthView() {
       monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
     }
 
-    if (focusDate.getFullYear() == event5.date.year && focusDate.getMonth() == event5.date.month - 1){
-      let eventDay  = skipLeadingDays + event5.date.day - 1;
-      monthView[eventDay] = `<span class="event">${monthView[eventDay]}</span>`;
-    }
+  
 
 
 
